@@ -1,0 +1,13 @@
+<?php
+// 数据库配置
+$host = "localhost";
+$db_user = "root";
+$db_pass = "";
+$db_name = "user_system";
+
+$conn = mysqli_connect($host, $db_user, $db_pass, $db_name);
+
+if (!$conn) {
+    die("连接失败: " . mysqli_connect_error());
+}
+?>
