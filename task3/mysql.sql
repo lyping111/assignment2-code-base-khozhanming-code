@@ -24,10 +24,19 @@ ALTER TABLE `shipments`
   ADD PRIMARY KEY (`id`);
 
 
+
+
 ALTER TABLE `shipments`
   MODIFY `id` bigint(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
+
 INSERT INTO `shipments`(`id`, `receiving_date`, `tracking_number`, `product_name`, `cbm`, `weight`) VALUES ('1','2026-04-01','TRK001','Laptop','0.50','3.00')
 UPDATE `shipments` SET `id`='1',`receiving_date`='2026-04-01',`tracking_number`='TRK001',`product_name`='Laptop',`cbm`='0.50',`weight`='3.00' WHERE 1
-DELETE FROM `shipments` WHERE 0
+DELETE FROM `shipments` WHERE id=2;
+
+ALTER TABLE `shipments`
+ ADD `abc` varhar(30)
+ALTER TABLE `shipments`
+ DROP `abc`
+
